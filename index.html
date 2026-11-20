@@ -35,7 +35,7 @@ async function loadRoster() {
         count += matches.length;
         const card = document.createElement('details');
         card.className = 'card';
-        card.open = Boolean(term || table.value);
+        card.open = true;
         const title = document.createElement('summary');
         title.textContent = number + '号桌';
         const list = document.createElement('ul');
@@ -49,7 +49,7 @@ async function loadRoster() {
       }
       status.textContent = term
         ? (count ? '找到 ' + count + ' 条记录' : '未找到匹配姓名，可以试试只输入姓氏。')
-        : (table.value ? '正在查看 ' + table.value + '号桌' : '点击桌号展开名单');
+        : (table.value ? '正在查看 ' + table.value + '号桌' : '全部桌号 · 可点击桌号收起名单');
     }
     document.querySelector('#filters').removeAttribute('hidden');
     document.querySelector('#help').removeAttribute('hidden');
