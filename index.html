@@ -1,1 +1,64 @@
-<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>婚宴座位查询 · 连通性测试</title><style>body{margin:0;background:#fff8ed;color:#432630;font:18px system-ui}main{box-sizing:border-box;max-width:480px;margin:auto;padding:48px 24px}h1{color:#742b3b}label,input{display:block}input{box-sizing:border-box;width:100%;padding:12px;margin:8px 0;border:1px solid #a98676;border-radius:8px;font:inherit}output{display:block;padding:12px 0}</style><main><h1>婚宴座位查询</h1><p>GitHub Pages 连通性测试</p><label for="name">输入测试姓名</label><input type="search" id="name" placeholder="例如：测试甲"><output id="result" aria-live="polite">请输入「测试甲」或「测试乙」</output></main><script>const seats={'测试甲':'1号桌','测试乙':'2号桌'};const field=document.querySelector('#name');const result=document.querySelector('#result');field.addEventListener('input',()=>{const name=field.value.trim();result.textContent=name?(Object.hasOwn(seats,name)?name+' · '+seats[name]:'未找到测试姓名'):'请输入「测试甲」或「测试乙」'});</script></html>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>婚宴座位查询 · 御风与柯娜</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f8f4ed;color:#2f2522;font:16px/1.55 system-ui,sans-serif}header{text-align:center;padding:36px 16px 28px;background:#722b3b;color:#fff6e8;border-bottom:4px solid #c29b6c}header p{margin:0}.names{font:20px/1.4 Georgia,"Songti SC",serif;letter-spacing:.12em}h1{margin:10px 0 3px;font:700 34px/1.25 Georgia,"Songti SC",serif}main{max-width:620px;margin:auto;padding:0 16px 35px}.filters{position:sticky;top:0;background:#f8f4ed;padding:15px 0 9px;z-index:1}input,select{width:100%;border:1px solid #b8a99a;border-radius:10px;background:#fffdf9;color:#2f2522;font:inherit;padding:10px 12px;min-height:46px}input:focus,select:focus{outline:2px solid #722b3b;outline-offset:2px}.row{display:grid;grid-template-columns:minmax(0,1fr) 110px;gap:10px}#status{margin:8px 0 0;color:#665248;font-size:14px}.card{background:#fffdf9;border:1px solid #e2d8cb;border-radius:12px;margin:0 0 10px}summary{cursor:pointer;font-size:18px;font-weight:700;color:#722b3b;padding:13px 16px}ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px;list-style:none;padding:0 16px 12px;margin:0}li{padding:7px 0;border-top:1px solid #eee4d8;overflow-wrap:anywhere}footer{margin:15px 0;color:#665248;font-size:14px;text-align:center}[hidden]{display:none}.single{margin:12px 0}
+</style></head><body>
+<header><p class="names">御风 &amp; 柯娜</p><h1>婚宴座位查询</h1><p>11月22日 · 东莞洲际酒店 民盈1厅</p></header>
+<main><div class="filters"><div class="row" id="filters" hidden><input type="search" id="query" placeholder="输入姓名查桌号" aria-label="输入姓名查桌号" autocomplete="off"><select id="table" aria-label="按桌号查看"><option value="">全部桌号</option></select></div><p id="status" role="status">正在读取座位表…</p></div><div id="results"></div><footer id="help" hidden>找不到姓名？请咨询签到处工作人员。</footer></main>
+<script>const sealed="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";</script><script>const query = document.querySelector('#query');
+const table = document.querySelector('#table');
+const status = document.querySelector('#status');
+const results = document.querySelector('#results');
+
+async function loadRoster() {
+  const fragment = location.hash.slice(1);
+  if (!/^[a-f0-9]{32}$/.test(fragment)) {
+    status.textContent = '请扫描签到处的座位查询二维码。';
+    return;
+  }
+  try {
+    const keyBytes = Uint8Array.from(fragment.match(/../g), pair => parseInt(pair, 16));
+    const bytes = Uint8Array.from(atob(sealed), char => char.charCodeAt(0));
+    const key = await crypto.subtle.importKey('raw', keyBytes, 'AES-GCM', false, ['decrypt']);
+    const plaintext = await crypto.subtle.decrypt({name:'AES-GCM', iv:bytes.slice(0,12)}, key, bytes.slice(12));
+    const roster = Object.entries(JSON.parse(new TextDecoder().decode(plaintext)));
+    for (const [number] of roster) {
+      table.add(new Option(number + '号桌', number));
+    }
+    function render() {
+      const term = query.value.trim().normalize('NFKC').toLowerCase();
+      let count = 0;
+      results.replaceChildren();
+      for (const [number, names] of roster) {
+        if (table.value && number !== table.value) continue;
+        const matches = names.filter(name => name.normalize('NFKC').toLowerCase().includes(term));
+        if (!matches.length) continue;
+        count += matches.length;
+        const card = document.createElement('details');
+        card.className = 'card';
+        card.open = Boolean(term || table.value);
+        const title = document.createElement('summary');
+        title.textContent = number + '号桌';
+        const list = document.createElement('ul');
+        for (const name of matches) {
+          const item = document.createElement('li');
+          item.textContent = name;
+          list.append(item);
+        }
+        card.append(title, list);
+        results.append(card);
+      }
+      status.textContent = term
+        ? (count ? '找到 ' + count + ' 条记录' : '未找到匹配姓名，可以试试只输入姓氏。')
+        : (table.value ? '正在查看 ' + table.value + '号桌' : '点击桌号展开名单');
+    }
+    document.querySelector('#filters').removeAttribute('hidden');
+    document.querySelector('#help').removeAttribute('hidden');
+    query.addEventListener('input', () => { if (query.value.trim()) table.value = ''; render(); });
+    table.addEventListener('change', () => { query.value = ''; render(); });
+    render();
+  } catch {
+    status.textContent = '座位表加载失败，请重新扫码或咨询签到处。';
+  }
+}
+loadRoster();
+</script></body></html>
